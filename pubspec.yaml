@@ -77,18 +77,18 @@ flutter:
     - family: Raleway
       fonts:
         - asset: assets/fonts/RaleWay-Regular.ttf
-        - asset: assets/fonts/RaleWay-Bold.ttff
+        - asset: assets/fonts/RaleWay-Bold.ttf
           weight: 700
-        - asset: assets/fonts/RaleWay-Black.ttff
+        - asset: assets/fonts/RaleWay-Black.ttf
           weight: 900
     - family: RobotoCondensed
       fonts:
-        - asset: assets/fonts/RobotoCondensed-Regular.ttff
-        - asset: assets/fonts/RobotoCondensed-Bold.ttff
+        - asset: assets/fonts/RobotoCondensed-Regular.ttf
+        - asset: assets/fonts/RobotoCondensed-Bold.ttf
           weight: 700
-        - asset: assets/fonts/RobotoCondensed-Light.ttff
+        - asset: assets/fonts/RobotoCondensed-Light.ttf
           weight: 300
-        - asset: fassets/fonts/RobotoCondensed-Iatlic.ttff
+        - asset: fassets/fonts/RobotoCondensed-Iatlic.ttf
           style: italic
   #
   # For details regarding fonts from package dependencies,
