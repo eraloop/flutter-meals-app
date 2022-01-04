@@ -1,32 +1,54 @@
 import 'package:flutter/material.dart';
 
+import 'categories_meals_screen.dart';
 
 class CategoryItem extends StatelessWidget {
 
+  final String id;
   final String title;
   Color color;
 
-  CategoryItem( this.title, this.color);
+  CategoryItem(this.id, this.title, this.color);
+
+  void selectCategory(BuildContext ctx){
+    // Navigator.of(ctx).push(MaterialPageRoute(
+    //   builder: (_){
+    //   return CategoriesMealScreen(this.id, this.title);
+    // }));
+    Navigator.of(ctx).pushNamed(
+      '/category-meals',
+      arguments: {
+        'id':id,
+        'title': title
+      }
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return InkWell(
+      onTap: () => selectCategory(context),
+      splashColor: Theme.of(context).primaryColor,
+      borderRadius: BorderRadius.circular(15),
 
-      padding:const EdgeInsets.all(15),
-      child: Text(title, 
-      style: Theme.of(context).textTheme.subtitle1,),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(colors: [
-          color.withOpacity(0.7),
-          color
-        ],
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight
+      child: Container(
+    
+        padding:const EdgeInsets.all(15),
+        child: Text(title, 
+        style: Theme.of(context).textTheme.subtitle1,),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(colors: [
+            color.withOpacity(0.7),
+            color
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight
+          ),
+          borderRadius: BorderRadius.circular(15),
+    
         ),
-        borderRadius: BorderRadius.circular(15),
-
+    
       ),
-
     );
   }
 }
