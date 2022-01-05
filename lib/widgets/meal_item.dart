@@ -62,7 +62,6 @@ import '../models/meal.dart';
     void selectMeal(BuildContext context){
       Navigator.of(context).pushNamed(MealDetailsScreen.routeName, arguments: {
         'id': id,
-
       });
     }
 
@@ -71,7 +70,8 @@ import '../models/meal.dart';
      return InkWell(
        onTap: () => selectMeal(context),
        child: Card(
-         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+         shape: RoundedRectangleBorder(
+           borderRadius: BorderRadius.circular(15)),
          elevation: 4,
          margin:const EdgeInsets.all(10),
          child: Column(
@@ -88,7 +88,7 @@ import '../models/meal.dart';
                ),
                Positioned(
                  bottom: 20,
-                 right: 0,
+
                  child: Container(
                    width: 250,
                    color: Colors.black38,

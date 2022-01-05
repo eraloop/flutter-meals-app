@@ -23,6 +23,7 @@ class CategoryMealScreen extends StatelessWidget {
     final Affordability affordability;
 
     final routeArgs = ModalRoute.of(context)?.settings.arguments as Map<String, String>;
+    
     final String? categoryId = routeArgs['id'];
     final String? categoryTitle = routeArgs['title'];
     final categoryMeals = DUMMY_MEALS.where((meal){
