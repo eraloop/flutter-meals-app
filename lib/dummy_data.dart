@@ -31,7 +31,7 @@ const DUMMY_DATA =  [
   ),
   Category(
     id: 'c5',
-    title: 'ISummer',
+    title: ' Summer',
     color: Colors.yellow,
   ),
   Category(
@@ -61,7 +61,8 @@ const DUMMY_DATA =  [
   ),
 ];
 
-const DUMMY_MEALS =[
+const DUMMY_MEALS = [
+
   Meal(
     id: 'm1',
     categories: [
@@ -96,6 +97,8 @@ const DUMMY_MEALS =[
     isVegetarian: true,
     isLactoseFree: true,
   ),
+
+
   Meal(
     id: 'm2',
     categories: [

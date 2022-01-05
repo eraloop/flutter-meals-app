@@ -28,8 +28,9 @@ class Meal{
   final bool isVegetarian;
 
 
-  Meal(this.steps, {
+  const Meal({
     required this.id,
+    required this.steps, 
     required this.categories,
     required this.title,
     required this.complexity,
@@ -40,6 +41,6 @@ class Meal{
     required this.isGlutenFree,
     required this.isLactoseFree,
     required this.isVegan,
-    required this.isVegetarian
+    required this.isVegetarian, 
   });
 }
