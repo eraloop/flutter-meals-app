@@ -25,6 +25,7 @@ import '../models/meal.dart';
       
     }
     );
+
     String get ComplexityText {
 
       switch (complexity){
@@ -36,6 +37,22 @@ import '../models/meal.dart';
           break;
         case Complexity.Hard:
           return 'Hard';
+          break;
+        default: 
+          return 'Unknown';
+      }
+    }
+
+    String get affordabilityText{
+       switch (affordability){
+        case Affordability.Affordable:
+          return 'Affordable';
+          break;
+        case Affordability.Pricey:
+          return 'Pricey';
+          break;
+        case Affordability.Luxurious:
+          return 'Expensive';
           break;
         default: 
           return 'Unknown';
@@ -71,11 +88,14 @@ import '../models/meal.dart';
                ),
                Positioned(
                  bottom: 20,
-                 right: 10 ,
+                 right: 0,
                  child: Container(
                    width: 250,
                    color: Colors.black38,
-                   padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                   padding: const EdgeInsets.symmetric(
+                     vertical: 5, 
+                     horizontal: 20),
+
                    child: Text(title, 
                    style: const TextStyle(
                      fontSize: 26,
@@ -90,6 +110,7 @@ import '../models/meal.dart';
              Padding(
                padding: const EdgeInsets.all(20.0),
                child: Row(
+                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                  children: <Widget>[
                    Row(
                      children: <Widget>[
@@ -104,9 +125,17 @@ import '../models/meal.dart';
                        const SizedBox(width: 6,),
                        Text(ComplexityText),
                      ],
-                   )
+                   ),
+                   Row(
+                    children: <Widget>[
+                      const Icon(Icons.attach_money),
+                      const SizedBox(width: 6,),
+                      Text(affordabilityText),
+                    ],
+                  )
                  ],
                ),
+                
              )
            ],
          ),
