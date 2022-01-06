@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+// import 'package:mealsapp/screens/filter_screen.dart';
 import '/screens/favourites_screen.dart';
 
 import '/screens/categories_screen.dart';
@@ -14,7 +16,7 @@ class _TabsScreenState extends State<TabsScreen> {
 
  final List<Map<String, Widget>> _pages = [
     {
-      "page": CategoriesScreen(),
+      "page":  CategoriesScreen(),
       "title": const Text("Categories")
     },
    { 
@@ -47,7 +49,7 @@ class _TabsScreenState extends State<TabsScreen> {
         items: [ 
           BottomNavigationBarItem(
             backgroundColor: Theme.of(context).primaryColor,
-            icon: Icon(Icons.category),
+            icon: const Icon(Icons.category),
             label: 'Categories'),
 
             BottomNavigationBarItem(
