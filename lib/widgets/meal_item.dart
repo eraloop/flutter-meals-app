@@ -31,13 +31,13 @@ import '../models/meal.dart';
       switch (complexity){
         case Complexity.Simple:
           return 'Simple';
-          break;
+          
         case Complexity.Challenging:
           return 'Challenging';
-          break;
+         
         case Complexity.Hard:
           return 'Hard';
-          break;
+         
         default: 
           return 'Unknown';
       }
@@ -47,13 +47,13 @@ import '../models/meal.dart';
        switch (affordability){
         case Affordability.Affordable:
           return 'Affordable';
-          break;
+          
         case Affordability.Pricey:
           return 'Pricey';
-          break;
+          
         case Affordability.Luxurious:
           return 'Expensive';
-          break;
+          
         default: 
           return 'Unknown';
       }

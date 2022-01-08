@@ -47,7 +47,7 @@ class MealDetailsScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
         children: <Widget>[
-          Container(
+          SizedBox(
             height: 300,
             width: double.infinity,
             child: Image.network(selectedMeal.imageUrl,
@@ -78,7 +78,7 @@ class MealDetailsScreen extends StatelessWidget {
                   leading: CircleAvatar(child:Text('# ${index + 1}'),),
                   title: Text(selectedMeal.steps[index]),
                 ),
-                Divider()
+                const Divider()
               ],
             ) ,itemCount: selectedMeal.steps.length,)
           )

@@ -16,11 +16,11 @@ class _TabsScreenState extends State<TabsScreen> {
 
  final List<Map<String, Widget>> _pages = [
     {
-      "page":  CategoriesScreen(),
+      "page":  const CategoriesScreen(),
       "title": const Text("Categories")
     },
    { 
-     "page": FavouritesScreen(),
+     "page": const FavouritesScreen(),
      "title":const Text("Your Favourites")
     }
   ];
@@ -46,6 +46,7 @@ class _TabsScreenState extends State<TabsScreen> {
         selectedItemColor: Theme.of(context).accentColor,
         currentIndex: _selectedPageIndex,
         // type: BottomNavigationBarType.shifting, 
+
         items: [ 
           BottomNavigationBarItem(
             backgroundColor: Theme.of(context).primaryColor,
@@ -54,7 +55,7 @@ class _TabsScreenState extends State<TabsScreen> {
 
             BottomNavigationBarItem(
             backgroundColor: Theme.of(context).primaryColor,
-            icon: Icon(Icons.star),
+            icon:const  Icon(Icons.star),
             label: 'Favourites')
         ],
       ),

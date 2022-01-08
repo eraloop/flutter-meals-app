@@ -16,11 +16,11 @@ class CategoryMealScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String title;
-    final String imageUrl;
-    final int duration;
-    final Complexity complexity;
-    final Affordability affordability;
+    // final String title;
+    // final String imageUrl;
+    // final int duration;
+    // final Complexity complexity;
+    // final Affordability affordability;
 
     final routeArgs = ModalRoute.of(context)?.settings.arguments as Map<String, String>;
     
