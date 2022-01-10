@@ -6,8 +6,20 @@ class MainDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
-    );
+    return Drawer(child: Column(
+      children: [
+        Container(height: 120,
+        width: double.infinity,
+        padding: const EdgeInsets.all(20),
+        alignment:Alignment.centerLeft,
+        color: Theme.of(context).accentColor,
+        child:  const Text("Cooking Up",
+        style: TextStyle(
+          fontWeight: FontWeight.w900,
+          fontSize: 30,
+          color: Theme.of(context).primaryColor,
+        ),) ,)
+      ],
+    ) ,);
   }
 }
